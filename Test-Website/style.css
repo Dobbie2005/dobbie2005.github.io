@@ -57,10 +57,15 @@ body {
 /* Styling for the right-hand panel with the image */
 .right-panel {
     flex: 1; /* Allows this panel to grow and take up space */
-    background-size: cover;
-    background-position: center;
-    /* Insert your image here using the background-image property */
-    /* Example: background-image: url('path/to/your/image.jpg'); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This new rule ensures the image scales correctly */
+.responsive-image {
+    max-width: 100%; /* Ensures the image doesn't overflow its container */
+    height: auto;   /* Maintains the image's aspect ratio */
 }
 
 /* Make the website look good on smaller screens */
