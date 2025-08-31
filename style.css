@@ -59,8 +59,7 @@ body {
     flex: 1; /* Allows this panel to grow and take up space */
     background-size: cover;
     background-position: center;
-    /* Insert your image here using the background-image property */
-    /* Example: background-image: url('path/to/your/image.jpg'); */
+    background-image: url('Images/gettyimages-610259354-612x612.jpeg');
 }
 
 /* Make the website look good on smaller screens */
