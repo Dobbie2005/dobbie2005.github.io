@@ -3,24 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>Ukiyo Photography</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <div class="left-panel">
-            <h1 class="logo">PhotoWebDesigns.com</h1>
-            <h2 class="main-heading">Web Design for Creatives – Built to Win Awards.</h2>
-            <p class="sub-heading">WWWWWWebsite designs for photographers, artists and galleries.</p>
-            <button class="cta-button">Get started →</button>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Timeless Moments, Captured Forever.</h1>
+            <p class="hero-subtitle">Ukiyo Photography specializes in capturing life's most beautiful moments with a touch of elegance and authenticity.</p>
+            <a href="#services" class="cta-button">View My Work</a>
         </div>
+    </section>
 
-        <div class="right-panel">
-            <img src="./Images/Camera-Image.jpg" alt="A person holding a camera" class="responsive-image">
-            <img src="https://picsum.photos/seed/scenic/400/600" alt="A placeholder image of a scenic view" class="responsive-image">
+    <section id="about" class="about-section">
+        <div class="about-image">
+            <img src="images/Camera-Image.jpg" alt="A photographer with a camera">
         </div>
-    </div>
+        <div class="about-content">
+            <h2 class="section-title">A passion for storytelling.</h2>
+            <p>I believe that every photo should tell a story. 
+                It’s a moment frozen in time, holding the laughter, the joy, and the silent emotions that define our lives. 
+                My goal is to create images that are not just beautiful, but also meaningful and emotional, capturing the authentic 
+                essence of who you are. My approach to photography goes beyond simply snapping a picture. It is a collaborative process 
+                where we work together to uncover the unique narrative of your life.
+                I am here to capture your unique story. Each image is a chapter, carefully crafted to preserve the memories and feelings 
+                that you will cherish for a lifetime.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <a href="#" class="service-card">
+                <div class="service-preview">
+                    <img src="images/Portrait.jpg" alt="Portraits" class="service-image">
+                    <div class="service-title">
+                        <h2>Portraits</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div class="service-preview">
+                    <img src="images/family.webp" alt="Family Photo Shoot" class="service-image">
+                    <div class="service-title">
+                        <h2>Family</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div class="service-preview">
+                    <img src="images/wedding.webp" alt="Wedding Shoots" class="service-image">
+                    <div class="service-title">
+                        <h2>Wedding</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div class="service-preview">
+                    <img src="images/boudoir.webp" alt="Boudoir Photography" class="service-image">
+                    <div class="service-title">
+                        <h2>Boudoir</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div class="service-preview">
+                    <img src="images/events.jpg" alt="Events" class="service-image">
+                    <div class="service-title">
+                        <h2>Events</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="service-card">
+                <div class="service-preview">
+                    <img src="images/Contents.jpg" alt="Headshots" class="service-image">
+                    <div class="service-title">
+                        <h2>Contents</h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div class="wave-separator"></div>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Let's Create Something Amazing.</h2>
+        <div class="contact-form-wrapper">
+            <form action="https://formspree.io/f/mqadjlqz" method="POST" class="contact-form">
+                <input type="text" placeholder="Your Name" name="name" required>
+                <input type="text" placeholder="Your Surname" name="surname" required>
+                <input type="email" placeholder="Your Email" name="email" required>
+                <input type="tel" placeholder="Your Cell Number (+27)" name="cell_number" required>
+                <textarea placeholder="Share a summary of your Vision..." name="message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>© 2024 Ukiyo Photography. All Rights Reserved.</p>
+            <div class="logo-container">
+                <img src="images/Annine.jpg" alt="Ukiyo Photography Logo" class="footer-logo">
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

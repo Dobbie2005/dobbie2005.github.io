@@ -1,84 +1,282 @@
-/* General body styling for a clean slate */
-body {
-    font-family: Arial, sans-serif;
+/* Universal Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f7f4; /* A light beige background color */
 }
 
-/* The main container for the two panels */
-.container {
-    display: flex; /* This enables Flexbox layout */
-    min-height: 100vh; /* Ensures the container takes up the full screen height */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Styling for the left-hand panel with text */
-.left-panel {
-    flex: 1; /* Allows this panel to grow and take up space */
-    display: flex;
-    flex-direction: column; /* Stacks the content vertically */
-    justify-content: center; /* Centers the content vertically */
-    padding: 5%;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.main-heading {
-    font-size: 3rem;
-    font-weight: bold;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
     color: #333;
-    line-height: 1.2;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    background-color: #fff;
 }
 
-.sub-heading {
-    font-size: 1.2rem;
-    color: #666;
-    margin-top: 0;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 .cta-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('images/wedding.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5%;
+    background-color: #ffffff;
+    gap: 3rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex: 0 0 300px;
+}
+
+.about-content {
+    flex: 1; /* Allows the text content to take up the remaining space */
+    padding-left: 0; /* Remove the extra padding */
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 5% 6rem;
+    text-align: center;
+    background-color: #d2d2d0;
+    position: relative;
+    overflow: hidden;
+    /* Adding space for the wave separator and fixing z-index issues */
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Service Card */
+.service-card {
+    text-decoration: none;
+    color: #d4d4d2;
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    filter: brightness(1) blur(2px);
+    transform: scale(1.1);
+}
+
+.service-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Wave Separator */
+.wave-separator {
+    width: 100%;
+    height: 300px;
+    background-image: url('images/wave.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Positioning it relative to the services section */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    margin-top: 0px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 5%;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+.contact-form-wrapper {
+    background-color: #fafafa;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-button {
     background-color: #000;
     color: #fff;
     padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
-    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    width: fit-content;
-    margin-top: 2rem;
+    transition: background-color 0.3s ease;
 }
 
-/* Styling for the right-hand panel with the image */
-.right-panel {
-    flex: 1; /* Allows this panel to grow and take up space */
+.submit-button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+.footer {
+    margin-top: 3rem;
+    background-color: #000;
+    padding: 2rem;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* This new rule ensures the image scales correctly */
-.responsive-image {
-    max-width: 100%; /* Ensures the image doesn't overflow its container */
-    height: auto;   /* Maintains the image's aspect ratio */
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    text-align: center;
 }
 
-/* Make the website look good on smaller screens */
+.footer-container p {
+    margin: 0;
+}
+
+.logo-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stacks the panels vertically on mobile */
+    .hero-title {
+        font-size: 2.5rem;
     }
 
-    .left-panel {
-        padding: 10%;
+    .about-section {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .main-heading {
-        font-size: 2rem;
+    .about-content {
+        padding-left: 0;
+        margin-top: 2rem;
     }
 }
