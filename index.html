@@ -6,14 +6,61 @@
     <title>Ukiyo Photography</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="images/photo-camera.ico">
+
 </head>
+
 <body>
+
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <nav class="main-nav">
+        </nav>
+    <main>
+        </main>
+
+    <script>
+        window.addEventListener('load', function() {
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            loadingOverlay.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+<body>
+
+<nav class="main-nav">
+    <a href="#" class="nav-logo">
+        <img src="images/Annine_Logo.png" alt="Ukiyo Photography Logo" class="site-logo">
+    </a>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#">My Gallery</a>
+            <ul class="dropdown-menu">
+                <li><a href="portraits.html">Portraits</a></li>
+                <li><a href="#">Family</a></li>
+                <li><a href="#">Wedding</a></li>
+                <li><a href="#">Boudoir</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contents</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="preparation.html">Preparation</a></li>
+    </ul>
+</nav>
 
     <section class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">Timeless Moments, Captured Forever.</h1>
             <p class="hero-subtitle">Ukiyo Photography specializes in capturing life's most beautiful moments with a touch of elegance and authenticity.</p>
-            <a href="#services" class="cta-button">View My Work</a>
+            <a href="#services" class="cta-button">View My Catalogue</a>
         </div>
     </section>
 
@@ -34,9 +81,9 @@
     </section>
 
     <section id="services" class="services-section">
-        <h2 class="section-title">My Services</h2>
+        <h2 class="section-title">Welcome to My Services</h2>
         <div class="services-grid">
-            <a href="#" class="service-card">
+            <a href="portraits.html" class="service-card">
                 <div class="service-preview">
                     <img src="images/Portrait.jpg" alt="Portraits" class="service-image">
                     <div class="service-title">
@@ -90,7 +137,7 @@
     <div class="wave-separator"></div>
 
     <section id="contact" class="contact-section">
-        <h2 class="section-title">Let's Create Something Amazing.</h2>
+        <h2 class="section-title">Let's Create Something Amazing!</h2>
         <div class="contact-form-wrapper">
             <form action="https://formspree.io/f/mqadjlqz" method="POST" class="contact-form">
                 <input type="text" placeholder="Your Name" name="name" required>
@@ -106,8 +153,13 @@
     <footer class="footer">
         <div class="footer-container">
             <p>© 2024 Ukiyo Photography. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/ukiyophotography_2023?igsh=NXZlZHVpbGt6OXYz&utm_source=qr" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/17PEcCVTx5/?mibextid=wwXIfr" target="_blank" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                <a href="mailto:haasbroek.annine@icloud.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+            </div>
             <div class="logo-container">
-                <img src="images/Annine.jpg" alt="Ukiyo Photography Logo" class="footer-logo">
+                <img src="Images/Annine_Logo.png" alt="Ukiyo Photography Logo" class="footer-logo">
             </div>
         </div>
     </footer>
