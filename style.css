@@ -1,35 +1,44 @@
-/*INDEX PAGE
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------/*
 /* Universal Styles */
-/* Main Navigation Bar */
-/* Loading Spinner */
-.loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
 }
 
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.cta-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Main Navigation Bar */
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -39,22 +48,17 @@
     left: 0;
     width: 100%;
     padding: 0.5rem 2%;
-    background-color: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(0);
     background-color: #000000;
     z-index: 1000;
 }
 
 .site-logo {
-    height: 45px; /* Adjust this value to your desired size */
+    height: 45px;
     width: auto;
     display: block;
 }
 
 .nav-logo {
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-weight: 600;
     text-decoration: none;
 }
 
@@ -91,7 +95,7 @@
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
-    list-style: none; /* Removes the bullet points */
+    list-style: none;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -109,46 +113,6 @@
 
 .dropdown-menu a:hover {
     color: #9c9c9c;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    font-weight: 600;
-    color: #000000; /* Changed to white */
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #333;
 }
 
 /* Hero Section */
@@ -208,18 +172,18 @@ body {
 }
 
 .about-content {
-    flex: 1; /* Allows the text content to take up the remaining space */
-    padding-left: 0; /* Remove the extra padding */
+    flex: 1;
+    padding-left: 0;
 }
 
 /* Services Section */
 .services-section {
-    padding: 4rem 5% 6rem;
+    padding: 4rem 5% 0;
     text-align: center;
-    background-color: #d2d2d0;
+    background-color: #d2d2d1;
     position: relative;
-    overflow: hidden;
-    /* Adding space for the wave separator and fixing z-index issues */
+    overflow: visible; /* Changed to visible to fix the cut-off */
+    padding-bottom: 150px; /* Adjust this value to add more space */
 }
 
 .section-title {
@@ -237,7 +201,7 @@ body {
 /* Service Card */
 .service-card {
     text-decoration: none;
-    color: #d4d4d2;
+    color: #333;
     display: block;
     position: relative;
     width: 300px;
@@ -272,23 +236,6 @@ body {
     z-index: 2;
 }
 
-/* Wave Separator */
-.wave-separator {
-    width: 100%;
-    height: 300px;
-    background-image: url('images/wave.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* Positioning it relative to the services section */
-    position: relative;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    margin-top: 0px;
-
-}
-
 /* Contact Section */
 .contact-section {
     padding: 4rem 5%;
@@ -296,11 +243,11 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-top: -50px;
+    margin-top: -50px; /* Adjust this to pull the contact section up */
 }
 
 .contact-form-wrapper {
-    background-color: #fafafad8;
+    background-color: #fafafa;
     padding: 2rem;
     border-radius: 10px;
     max-width: 700px;
@@ -344,45 +291,16 @@ body {
     background-color: #333;
 }
 
-/* Social Icons */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    position: absolute;
-    left: -130px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    color: #fff;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background-color: #fff;
-    color: #000;
-}
-
 /* Footer */
 .footer {
     height: 100px;
-    margin-top: 20px;
     background-color: #000;
     padding: 2rem;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
 }
 
 .footer-container {
@@ -392,143 +310,70 @@ body {
     text-align: center;
 }
 
-.footer-container p {
-    margin: 0;
-}
-
 .logo-container {
     position: absolute;
-    right: -150px;
+    right: 20px;
     top: 50%;
-    transform: translateY(-45%);
+    transform: translateY(-50%);
 }
 
 .footer-logo {
-    height: 70px;
+    height: 60px;
     width: auto;
+    user-drag: none;
     -webkit-user-drag: none;
 }
 
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 3.5rem;
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
     }
-
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        text-align: left;
+    }
+    .nav-links li {
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
     .about-section {
         flex-direction: column;
         text-align: center;
     }
-
     .about-content {
         padding-left: 0;
         margin-top: 2rem;
     }
-}
-
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------/*
-/* Service Gallery Section */
-.service-page-header {
-    padding-top: 5rem; /* This will push the heading down */
-    text-align: center;
-    padding-bottom: 2rem;
-
-}
-
-.service-hero-title {
-    font-size: 3.5rem; /* Adjust this value to your desired size */
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.service-hero-subtitle {
-    font-size: 1rem;
-    padding-bottom: -10px;
-}
-
-.service-gallery {
-    padding: 2rem 5%;
-}
-
-.gallery-title {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-}
-
-.photo-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-block {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    overflow: hidden;
-    grid-column: span 2;
-    transition: all 0.3s ease;
-}
-
-.pricing-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/model9.jpg'); /* <- Your image path here */
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.8) blur(3px); /* Apply blur */
-    z-index: 1;
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
-
-.pricing-block:hover .pricing-background {
-    filter: brightness(1) blur(0px); /* Unblur on hover */
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-.pricing-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    transition: background-color 0.3s ease;
-}
-
-.pricing-block:hover .pricing-content {
-    background-color: rgba(0, 0, 0, 0.3); /* Subtle dark overlay on hover */
-}
-
-.pricing-content h3 {
-    font-size: 2rem; /* Adjust this value to your desired size */
-    font-weight: 700;
-}
-
-.pricing-content p {
-    font-size: 1.5rem; /* Adjust this value to your desired size */
-    font-weight: 400;
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        width: 100%;
+        height: auto;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-container {
+        position: static;
+        margin-top: 1rem;
+    }
+    .social-icons {
+        position: static;
+        margin-bottom: 1rem;
+    }
 }
